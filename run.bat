@@ -33,26 +33,44 @@ cls
 set "LOGFILE=%OUTDIR%run-install-output.txt"
 echo === Installing all projects === > "%LOGFILE%"
 echo. >> "%LOGFILE%"
+echo Installing... (see progress below)
+echo.
 
+echo [ai-one/auth-app]
 call :INSTALL_ONE ai-one auth-app >> "%LOGFILE%" 2>&1
+echo [ai-one/backend]
 call :INSTALL_ONE ai-one backend >> "%LOGFILE%" 2>&1
+echo [apollo/client]
 call :INSTALL_ONE apollo client >> "%LOGFILE%" 2>&1
+echo [apollo/server]
 call :INSTALL_ONE apollo server >> "%LOGFILE%" 2>&1
+echo [car-pooling]
 call :INSTALL_ONE car-pooling . >> "%LOGFILE%" 2>&1
+echo [formbuilder/client]
 call :INSTALL_ONE formbuilder client >> "%LOGFILE%" 2>&1
+echo [formbuilder/server]
 call :INSTALL_ONE formbuilder server >> "%LOGFILE%" 2>&1
+echo [game]
 call :INSTALL_ONE game . >> "%LOGFILE%" 2>&1
+echo [interview-ai]
 call :INSTALL_ONE interview-ai . >> "%LOGFILE%" 2>&1
+echo [my-gatsby-portfolio]
 call :INSTALL_ONE my-gatsby-portfolio . >> "%LOGFILE%" 2>&1
+echo [nykaa]
 call :INSTALL_ONE nykaa . >> "%LOGFILE%" 2>&1
+echo [sephora]
 call :INSTALL_ONE sephora . >> "%LOGFILE%" 2>&1
+echo [syngenta]
 call :INSTALL_ONE syngenta . >> "%LOGFILE%" 2>&1
 
+echo.
+echo === React-practice sub-projects ===
 echo. >> "%LOGFILE%"
 echo === React-practice sub-projects === >> "%LOGFILE%"
 cd /d "%~dp0..\react-practice"
 for /d %%d in (*) do (
   if exist "%%d\package.json" (
+    echo [react-practice/%%d]
     echo Installing %%d... >> "%LOGFILE%"
     cd "%%d" && call pnpm install >> "%LOGFILE%" 2>&1 && cd ..
   )
@@ -61,7 +79,7 @@ echo. >> "%LOGFILE%"
 echo Done! All dependencies installed. >> "%LOGFILE%"
 cd /d "%~dp0"
 echo.
-echo Output saved to: "%LOGFILE%"
+echo Done! Output saved to: "%LOGFILE%"
 echo.
 echo Press any key to open this file in Notepad...
 pause >nul
@@ -89,15 +107,20 @@ cls
 set "LOGFILE=%OUTDIR%run-lint-output.txt"
 echo === Lint + Format all === > "%LOGFILE%"
 echo. >> "%LOGFILE%"
+echo Running lint/format... (see progress below)
+echo.
 
+echo [ai-one/auth-app]
 call :LINT_ONE ai-one auth-app >> "%LOGFILE%" 2>&1
+echo [car-pooling]
 call :LINT_ONE car-pooling . >> "%LOGFILE%" 2>&1
+echo [my-gatsby-portfolio]
 call :LINT_ONE my-gatsby-portfolio . >> "%LOGFILE%" 2>&1
 
 echo. >> "%LOGFILE%"
 echo Done! >> "%LOGFILE%"
 echo.
-echo Output saved to: "%LOGFILE%"
+echo Done! Output saved to: "%LOGFILE%"
 echo.
 echo Press any key to open this file in Notepad...
 pause >nul
@@ -161,39 +184,61 @@ cls
 set "LOGFILE=%OUTDIR%run-batch-output.txt"
 echo === Batch: install + lint + format === > "%LOGFILE%"
 echo. >> "%LOGFILE%"
+echo Running install, lint, format... (see progress below)
+echo.
 
+echo [INSTALL ai-one/auth-app]
 call :INSTALL_ONE ai-one auth-app >> "%LOGFILE%" 2>&1
+echo [INSTALL ai-one/backend]
 call :INSTALL_ONE ai-one backend >> "%LOGFILE%" 2>&1
+echo [INSTALL apollo/client]
 call :INSTALL_ONE apollo client >> "%LOGFILE%" 2>&1
+echo [INSTALL apollo/server]
 call :INSTALL_ONE apollo server >> "%LOGFILE%" 2>&1
+echo [INSTALL car-pooling]
 call :INSTALL_ONE car-pooling . >> "%LOGFILE%" 2>&1
+echo [INSTALL formbuilder/client]
 call :INSTALL_ONE formbuilder client >> "%LOGFILE%" 2>&1
+echo [INSTALL formbuilder/server]
 call :INSTALL_ONE formbuilder server >> "%LOGFILE%" 2>&1
+echo [INSTALL game]
 call :INSTALL_ONE game . >> "%LOGFILE%" 2>&1
+echo [INSTALL interview-ai]
 call :INSTALL_ONE interview-ai . >> "%LOGFILE%" 2>&1
+echo [INSTALL my-gatsby-portfolio]
 call :INSTALL_ONE my-gatsby-portfolio . >> "%LOGFILE%" 2>&1
+echo [INSTALL nykaa]
 call :INSTALL_ONE nykaa . >> "%LOGFILE%" 2>&1
+echo [INSTALL sephora]
 call :INSTALL_ONE sephora . >> "%LOGFILE%" 2>&1
+echo [INSTALL syngenta]
 call :INSTALL_ONE syngenta . >> "%LOGFILE%" 2>&1
 
+echo.
+echo === React-practice ===
 echo. >> "%LOGFILE%"
 echo === React-practice === >> "%LOGFILE%"
 cd /d "%~dp0..\react-practice"
 for /d %%d in (*) do (
   if exist "%%d\package.json" (
+    echo [react-practice/%%d]
     echo Installing %%d... >> "%LOGFILE%"
     cd "%%d" && call pnpm install >> "%LOGFILE%" 2>&1 && cd ..
   )
 )
 
+echo.
+echo [LINT ai-one/auth-app]
 call :LINT_ONE ai-one auth-app >> "%LOGFILE%" 2>&1
+echo [LINT car-pooling]
 call :LINT_ONE car-pooling . >> "%LOGFILE%" 2>&1
+echo [LINT my-gatsby-portfolio]
 call :LINT_ONE my-gatsby-portfolio . >> "%LOGFILE%" 2>&1
 
 echo. >> "%LOGFILE%"
 echo Done! >> "%LOGFILE%"
 echo.
-echo Output saved to: "%LOGFILE%"
+echo Done! Output saved to: "%LOGFILE%"
 echo.
 echo Press any key to open this file in Notepad...
 pause >nul
