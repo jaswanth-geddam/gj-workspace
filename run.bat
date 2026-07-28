@@ -19,6 +19,7 @@ echo   5. Open project folders
 echo   0. Exit
 echo.
 set /p choice=Choose an option: 
+if errorlevel 1 exit /b
 
 if "%choice%"=="1" goto INSTALL
 if "%choice%"=="2" goto LINT
@@ -164,6 +165,7 @@ echo 11. react-practice  (CRA sub-projects)
 echo  0. Back to menu
 echo.
 set /p r=Choose project: 
+if errorlevel 1 exit /b
 
 if "%r%"=="1" start "ai-one" cmd /c "cd /d "%~dp0..\ai-one" && run.bat"
 if "%r%"=="2" start "apollo" cmd /c "cd /d "%~dp0..\apollo" && run.bat"
