@@ -37,10 +37,10 @@ echo. >> "%LOGFILE%"
 echo Installing... (see progress below)
 echo.
 
-echo [ai-one/auth-app]
-call :INSTALL_ONE ai-one auth-app >> "%LOGFILE%" 2>&1
-echo [ai-one/backend]
-call :INSTALL_ONE ai-one backend >> "%LOGFILE%" 2>&1
+echo [one-ai/auth-app]
+call :INSTALL_ONE one-ai auth-app >> "%LOGFILE%" 2>&1
+echo [one-ai/backend]
+call :INSTALL_ONE one-ai backend >> "%LOGFILE%" 2>&1
 echo [apollo/client]
 call :INSTALL_ONE apollo client >> "%LOGFILE%" 2>&1
 echo [apollo/server]
@@ -111,8 +111,8 @@ echo. >> "%LOGFILE%"
 echo Running lint/format... (see progress below)
 echo.
 
-echo [ai-one/auth-app]
-call :LINT_ONE ai-one auth-app >> "%LOGFILE%" 2>&1
+echo [one-ai/auth-app]
+call :LINT_ONE one-ai auth-app >> "%LOGFILE%" 2>&1
 echo [car-pooling]
 call :LINT_ONE car-pooling . >> "%LOGFILE%" 2>&1
 echo [my-gatsby-portfolio]
@@ -151,7 +151,7 @@ echo ============================================
 echo       Run a project
 echo ============================================
 echo.
-echo  1. ai-one          (React + Express)
+echo  1. one-ai          (React + Express)
 echo  2. apollo          (React + Express)
 echo  3. car-pooling     (NestJS API)
 echo  4. formbuilder     (React + Express)
@@ -167,7 +167,7 @@ echo.
 set /p r=Choose project: 
 if errorlevel 1 exit /b
 
-if "%r%"=="1" start "ai-one" cmd /c "cd /d "%~dp0..\ai-one" && run.bat"
+if "%r%"=="1" start "one-ai" cmd /c "cd /d "%~dp0..\one-ai" && run.bat"
 if "%r%"=="2" start "apollo" cmd /c "cd /d "%~dp0..\apollo" && run.bat"
 if "%r%"=="3" start "car-pooling" cmd /c "cd /d "%~dp0..\car-pooling" && run.bat"
 if "%r%"=="4" start "formbuilder" cmd /c "cd /d "%~dp0..\formbuilder" && run.bat"
@@ -191,10 +191,10 @@ echo -- INSTALL PHASE --
 echo === Installing all projects === > "%ILOG%"
 echo. >> "%ILOG%"
 
-echo [ai-one/auth-app]
-call :INSTALL_ONE ai-one auth-app >> "%ILOG%" 2>&1
-echo [ai-one/backend]
-call :INSTALL_ONE ai-one backend >> "%ILOG%" 2>&1
+echo [one-ai/auth-app]
+call :INSTALL_ONE one-ai auth-app >> "%ILOG%" 2>&1
+echo [one-ai/backend]
+call :INSTALL_ONE one-ai backend >> "%ILOG%" 2>&1
 echo [apollo/client]
 call :INSTALL_ONE apollo client >> "%ILOG%" 2>&1
 echo [apollo/server]
@@ -238,8 +238,8 @@ echo -- LINT PHASE --
 echo === Lint + Format all === > "%LLOG%"
 echo. >> "%LLOG%"
 
-echo [ai-one/auth-app]
-call :LINT_ONE ai-one auth-app >> "%LLOG%" 2>&1
+echo [one-ai/auth-app]
+call :LINT_ONE one-ai auth-app >> "%LLOG%" 2>&1
 echo [car-pooling]
 call :LINT_ONE car-pooling . >> "%LLOG%" 2>&1
 echo [my-gatsby-portfolio]

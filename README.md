@@ -14,7 +14,7 @@ Management scripts for GJ's 15+ project portfolio under `C:\code\coaching\gj\`.
 
 | Name | Description |
 |------|-------------|
-| ai-one | Full-stack web app (Node.js/Express + React/Vite) with auth, resume parsing, job features, Google OAuth |
+| one-ai | Full-stack web app (Node.js/Express + React/Vite) with auth, resume parsing, job features, Google OAuth |
 | apollo | Monorepo: `client/` (Apollo Hospitals React frontend) + `server/` (Express/MongoDB doctor CRUD API) |
 | car-pooling | NestJS (TypeScript) backend REST API for car-pooling — JWT auth, email, PostgreSQL/TypeORM |
 | formbuilder | Monorepo: `client/` (React drag-and-drop form builder) + `server/` (Express/MongoDB form API) |

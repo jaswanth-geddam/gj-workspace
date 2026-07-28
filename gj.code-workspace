@@ -1,6 +1,6 @@
 {
   "folders": [
-    { "name": "ai-one",              "path": "..\\ai-one" },
+    { "name": "one-ai",              "path": "..\\one-ai" },
     { "name": "apollo",              "path": "..\\apollo" },
     { "name": "car-pooling",         "path": "..\\car-pooling" },
     { "name": "dsa-practice",        "path": "..\\dsa-practice" },
