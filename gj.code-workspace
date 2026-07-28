@@ -1,0 +1,34 @@
+{
+  "folders": [
+    { "name": "ai-one",              "path": "..\\ai-one" },
+    { "name": "apollo",              "path": "..\\apollo" },
+    { "name": "car-pooling",         "path": "..\\car-pooling" },
+    { "name": "dsa-practice",        "path": "..\\dsa-practice" },
+    { "name": "formbuilder",         "path": "..\\formbuilder" },
+    { "name": "game",                "path": "..\\game" },
+    { "name": "interview-ai",        "path": "..\\interview-ai" },
+    { "name": "java-practice",       "path": "..\\java-practice" },
+    { "name": "masai",               "path": "..\\masai" },
+    { "name": "my-gatsby-portfolio", "path": "..\\my-gatsby-portfolio" },
+    { "name": "nykaa",               "path": "..\\nykaa" },
+    { "name": "python-practice",     "path": "..\\python-practice" },
+    { "name": "react-practice",      "path": "..\\react-practice" },
+    { "name": "sephora",             "path": "..\\sephora" },
+    { "name": "syngenta",            "path": "..\\syngenta" }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.git": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ]
+  }
+}
