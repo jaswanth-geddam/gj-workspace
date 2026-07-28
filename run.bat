@@ -81,9 +81,9 @@ cd /d "%~dp0"
 echo.
 echo Done! Output saved to: "%LOGFILE%"
 echo.
-echo Press any key to open this file in Notepad...
+echo Press any key to open the log file...
 pause >nul
-notepad "%LOGFILE%"
+start "" "%LOGFILE%"
 goto MENU
 
 :INSTALL_ONE
@@ -122,9 +122,9 @@ echo Done! >> "%LOGFILE%"
 echo.
 echo Done! Output saved to: "%LOGFILE%"
 echo.
-echo Press any key to open this file in Notepad...
+echo Press any key to open the log file...
 pause >nul
-notepad "%LOGFILE%"
+start "" "%LOGFILE%"
 goto MENU
 
 :LINT_ONE
@@ -240,9 +240,9 @@ echo Done! >> "%LOGFILE%"
 echo.
 echo Done! Output saved to: "%LOGFILE%"
 echo.
-echo Press any key to open this file in Notepad...
+echo Press any key to open the log file...
 pause >nul
-notepad "%LOGFILE%"
+start "" "%LOGFILE%"
 goto MENU
 
 :OPEN
