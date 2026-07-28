@@ -54,7 +54,7 @@ cd /d "%~dp0..\react-practice"
 for /d %%d in (*) do (
   if exist "%%d\package.json" (
     echo Installing %%d... >> "%LOGFILE%"
-    cd "%%d" && call npm install >> "%LOGFILE%" 2>&1 && cd ..
+    cd "%%d" && call pnpm install >> "%LOGFILE%" 2>&1 && cd ..
   )
 )
 echo. >> "%LOGFILE%"
@@ -77,7 +77,7 @@ if not "%sub%"=="." set "pkgdir=%pkgdir%\%sub%"
 echo ====== %proj%/%sub% ======
 cd /d "%pkgdir%"
 if exist package.json (
-  call npm install
+  call pnpm install
 ) else (
   echo No package.json found
 )
@@ -113,9 +113,9 @@ if not "%sub%"=="." set "pkgdir=%pkgdir%\%sub%"
 cd /d "%pkgdir%"
 if exist package.json (
   echo ====== %proj%/%sub% ======
-  call npm run lint 2>nul
+  call pnpm run lint 2>nul
   if errorlevel 1 echo No lint script
-  call npm run format 2>nul
+  call pnpm run format 2>nul
   if errorlevel 1 echo No format script
 )
 endlocal
@@ -182,7 +182,7 @@ cd /d "%~dp0..\react-practice"
 for /d %%d in (*) do (
   if exist "%%d\package.json" (
     echo Installing %%d... >> "%LOGFILE%"
-    cd "%%d" && call npm install >> "%LOGFILE%" 2>&1 && cd ..
+    cd "%%d" && call pnpm install >> "%LOGFILE%" 2>&1 && cd ..
   )
 )
 
