@@ -7,6 +7,7 @@
     { "name": "formbuilder",         "path": "..\\formbuilder" },
     { "name": "game",                "path": "..\\game" },
     { "name": "interview-ai",        "path": "..\\interview-ai" },
+    { "name": "jaswanth-geddam",     "path": "..\\jaswanth-geddam" },
     { "name": "java-practice",       "path": "..\\java-practice" },
     { "name": "masai",               "path": "..\\masai" },
     { "name": "my-gatsby-portfolio", "path": "..\\my-gatsby-portfolio" },
